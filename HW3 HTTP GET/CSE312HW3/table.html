@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>CSE312 - First HomeWork - Table</title>
+		<link rel="stylesheet" type="text/css" href="style.css"/>
+	</head>
+	
+	<body>
+
+		<!--Help from https://www.w3docs.com/snippets/html/how-to-create-an-html-button-that-acts-like-a-link.html-->
+		<button onclick="window.location.href='list.html'">Go to list</button>
+		<button onclick="addRow()">Add a row</button>
+
+		<div id="thisDivTagHasNoPurpose"></div>
+
+		<h2>This is a Table.</h2>
+
+		<table id="myTable">
+			<tr>
+				<th>Even</th>
+				<th>Odd</th>
+			</tr>
+			<tr>
+				<th>0</th>
+				<th>1</th>
+			</tr>
+		</table>
+
+		<script src="script.js"></script>
+	</body>
+</html>

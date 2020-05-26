@@ -1,0 +1,39 @@
+Some specs of my machine:
+Python 3.8.1
+Window 10
+PyCharm 2019.3.3 x64
+Google Chrome
+
+1.)
+In my folder, there is cert.pem and private.key
+This is my objective 1
+
+2.)
+To run my program
+
+In the same directory as my tcpserver.py
+
+In a command line, do:
+python tcpserver.py
+(I'm using python 3.8.1)
+
+In a browser (I used Chrome), go to https://localhost:8000
+Please make sure port 8000 is not taken
+the https part is important
+
+if visiting the site for first time on chrome,
+it will give you a "Your connection is not private"
+along with NET::ERR_CERT_AUTHORITY_INVALID
+
+This mean https has been implemented but with a bad CA
+This is my objective 3
+
+3.)
+click Advanced then Proceed to localhost (unsafe)
+If you go to sources, there should be 3 files, the html, javascript, and the image.
+
+Bonus: same as hw7 websocket but now uses wss instead of just ws
+
+Project architecture:
+Literally 1 line of code has been changed
+Basically switching the socket from server to the one provided by the sll library

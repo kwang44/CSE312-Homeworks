@@ -1,0 +1,87 @@
+Some specs of my machine:
+Python 3.8.1
+Window 10
+PyCharm 2019.3.3 x64
+Google Chrome
+
+Note, I used pycharm to develope this code
+Please clean cookies =)
+
+1.)
+To run my program
+
+In the same directory as my tcpserver.py
+
+In a command line, do:
+python tcpserver.py
+(I'm using python 3.8.1)
+
+In a browser (I used Chrome), go to localhost:8000
+Please make sure port 8000 is not taken
+
+The browser should display my blue html website
+Hit the "Add a row" and the table should increase in row, that is my javascript at work.
+
+On chrome, right click->inspect->source, there should be 3 files. 1 html, 1 css, and 1 javascript
+That should complete objective 1
+
+click on "go to list button:
+There should be an image under the list.
+This complete my objective 2
+
+
+For objective 3: go back to localhost:8000
+Quickly refresh the page, there should be a new image and the text should change.
+(the cookie expire every 10 seconds after cookie is set)
+On the page, Inspect->Application->Cookies
+If you keep refreshing, the number of visits should increase by 1 each time and dissapear after 10 second of doing nothing.
+That is my objective 3
+
+For objective 4: go to localhost:8000/comments
+In the url bar, enter these one by one:
+localhost:8000/comments?add=First%20Car
+localhost:8000/comments?add=Second%20Child
+localhost:8000/comments?add=Third%20Phone
+localhost:8000/comments?add=Fourth%20Job
+localhost:8000/comments?add=Fifth%20Banana
+(the %20 represent a space)
+
+The browser should have:
+0: First Car
+
+1: Second Child
+
+2: Third Phone
+
+3: Fourth Job
+
+4: Fifth Banana
+
+the number on the left is the index
+Now enter: 
+localhost:8000/comments?remove=2 
+into the url bar
+The "2: Third Phone" should be removed
+
+comments?add=string is for adding to comment
+comments?remove=string is for removing to comment
+
+refreshing the page send multiple query
+This conclude my objective 4
+
+
+
+This project have parts from HW1 and HW2, tcp part of the server is the same.
+The http is heavyly changed.
+
+For objective 1, I just change the Content-Type to text/html and serve the html code similar to HW2(after reading it from my html files)
+This is the same for css and javascript
+
+For objective 2, the Content-Type is changed to image/jpeg and the rest is simliar to objective 1
+
+For objective 3, I added the Set-Cookie in the http response to the home page of localhost:8000
+The cookie has key=value of visits=number where number represent the number of visit. The cookie has
+max-life of 10 seconds where it reset after 10 seconds.
+
+For objective 4, my code look for /comments in the url path. After it got it, the code look for the '?' character
+The code then look for if it remove or add or just serve the response.

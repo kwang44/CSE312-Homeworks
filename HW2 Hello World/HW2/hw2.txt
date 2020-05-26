@@ -1,0 +1,45 @@
+Some specs of my machine:
+Python 3.8.1
+Window 10
+PyCharm 2019.3.3 x64
+Google Chrome
+
+Note, I used pycharm to develope this code
+
+
+1. To run my program
+
+In the same directory as my tcpserver.py
+
+In a command line, do:
+python tcpserver.py
+(I'm using python 3.8.1)
+
+In a browser (I used Chrome), go to localhost:8000
+Please make sure port 8000 is not taken
+
+The browser should display the exact message it send to the server.
+I just add the http response header to what the browser get request and send it back.
+
+This is my way of confirming tcp server has worked and showing objective 1 has been completed
+
+
+2. my "Hello World!"
+go to: localhost:8000/hello
+There should be a plain text of "Hello World!"
+This is my way of doing objective 2
+
+3. for 301 redirect, just go to
+localhost:8000/301
+
+it should be redirected to localhost:8000/hello
+
+4. for 401
+just do localhost:8000/ followed by random string ex: localhost:8000/sdijsfdij
+should get a 404
+
+
+i used python's socketserver library
+The main function basically start the tcp server and then start a infinite loop with the socketserver
+
+The handle function get called everytime the server get an input. The rest is just setting the correct http responses as byte string.

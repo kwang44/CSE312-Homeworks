@@ -1,0 +1,55 @@
+Some specs of my machine:
+Python 3.8.1
+Window 10
+PyCharm 2019.3.3 x64
+Google Chrome
+
+301 and 404 from HW2 does not exist
+
+Note, I used pycharm to develope this code
+Please clean cookies =)
+
+1.)
+To run my program
+
+In the same directory as my tcpserver.py
+
+In a command line, do:
+python tcpserver.py
+(I'm using python 3.8.1)
+
+In a browser (I used Chrome), go to localhost:8000
+Please make sure port 8000 is not taken
+
+Click on "Objective 1: AJAX GET" or go to http://localhost:8000/ajax_get.html if link doesn't work
+Go to network section of inspect and refresh the page.
+The second block of text is the ajax request
+There should be 3 request, the ajax request is the get_time which return date and time of the server.
+This conclude objective 1
+
+2.) go back to localhost:8000 and click on "Objective 2 and 3: AJAX POST AND GET"
+this should land you on http://localhost:8000/ajax_post_get.html
+
+type any random message in user name and chat and click send. This will trigger a post to server.
+Click update message from server, this is the get.
+
+the ajax functions is in ajax_post_get_script.js
+The function send and receive JSON
+
+This conclude my objective 2 and 3
+
+3.) open http://localhost:8000/ajax_polling.html in 2 tabs.
+Note: I use the same function as previous objectives, so previous message also should be displayed
+Send any messages in 1 of them and it should be displayed on the other one.
+The javascript polling is to 500ms
+
+I tested the html injection with these I copied from w3schools. They should be displayed as normal text
+<a href="https://www.w3schools.com">Visit W3Schools.com!</a>
+<button type="button">Click Me!</button>
+This conclude my objective 4
+
+My software architecture:
+Objective 1 is very similar to hw3 but with added response to the ajax
+Objective 2 and 3 was done together, the post and and response are in JSON format
+Objective 4 is hooked onto code already in 2 and 3 but with setInterval(recieveMessage, 500); to the javascript
+the replace string function is what I used for html injection.

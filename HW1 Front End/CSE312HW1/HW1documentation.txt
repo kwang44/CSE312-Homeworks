@@ -1,0 +1,14 @@
+1. You can use the files in the zip files or https://cse.buffalo.edu/~kwang44/
+
+2. open list.html (I used chrome)
+The html page have a list and a button that link to the table
+
+3. click the button to go to table.html
+The html page have a table and 2 buttons
+The first button go link to list
+The second button add a row to the table
+
+
+I used onclick="window.location.href='example.html'" to link the page to each other in the button.
+The "add a row" button called a java script function that would edit the html.
+The CSS is exactly what we did in class.

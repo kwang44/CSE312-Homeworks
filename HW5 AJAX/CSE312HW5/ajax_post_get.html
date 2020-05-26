@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>objective 2 and 3</title>
+</head>
+<body>
+
+    <!--From ajax slides-->
+    <label for="userName">User Name: </label>
+    <input id="userName" type="text" name="userName"><br>
+
+    <label for="chatInput">Chat: </label>
+    <input id="chatInput" type="text" name="message"><br>
+
+    <button onclick="sendMessage()">Send</button><br>
+    <button onclick="recieveMessage()">Update Message from server</button>
+
+    <table id="messageTable" border="1">
+        <tr>
+            <th>User</th>
+            <th>Message</th>
+            <th>Time</th>
+        </tr>
+
+    </table>
+
+    <div id="messageBox"></div>
+<script src="ajax_post_get_script.js"></script>
+</body>
+</html>

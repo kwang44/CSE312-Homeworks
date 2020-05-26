@@ -1,0 +1,73 @@
+Some specs of my machine:
+Python 3.8.1
+Window 10
+PyCharm 2019.3.3 x64
+Google Chrome
+
+I started over from HW3 so stuff like 301 and 404 does not exist anymore
+
+Note, I used pycharm to develope this code
+Please clean cookies =)
+
+1.)
+To run my program
+
+In the same directory as my tcpserver.py
+
+In a command line, do:
+python tcpserver.py
+(I'm using python 3.8.1)
+
+In a browser (I used Chrome), go to localhost:8000/comments
+Please make sure port 8000 is not taken
+
+There should be a form with label "Enter your name" and "Comments
+This form exist within my comment.html
+
+In the name label: enter user1
+In the comment label: enter hello world!
+press submit
+
+In the name label: enter user2
+In the comment label: enter hello world2!
+press submit
+
+the second comment should be below the first. The text is stored in comment.txt file.
+
+That conclude my objective 1
+
+2.)
+Please use only png images
+go to localhost:8000
+There is another form that is used to upload image
+Please make sure to use .png images
+
+images binary are stored in images_dict dictionary in getrequest.py, not actually in file form
+Restarting my code will erase any previously uploaded images
+
+I have 2 .png ready to use in the same folder, random.png and random2.png
+
+click Choose File, click random.png, click submit, click Go Home!
+click Choose File, click random2.png, click submit, click Go Home!
+click Choose File, click random.png, click submit, click Go Home!
+
+That conclude my objective 2
+
+click Go to images, there should be 3 images displayed that is my objective 4
+
+The image is saved image1.png, image2.png, image3.png ect
+
+Click on image1.png and browser should show you just the image
+Click on Download image1.png and browser should download the image
+
+That conclude my objective 3
+
+
+
+The architecture of my software:
+Objective 1 is very similar to HW3 query strings but we're using form instead of directly using the url.
+
+Objective 2 was the hardest part. My code basically search for the boundary of the recv() that should be at the end of the image file.
+Once it is it found, the rest is just bytes string parsing.
+
+Objective 3 and 4 is kinda the same idea that is in serving an image in HW3, but with more images.
